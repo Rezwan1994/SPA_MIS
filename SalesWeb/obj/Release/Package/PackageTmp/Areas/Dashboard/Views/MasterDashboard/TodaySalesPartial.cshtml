@@ -1,0 +1,48 @@
+﻿@{
+    Layout = null;
+}
+@model SalesWeb.Areas.Dashboard.Models.BEL.DashboardModel
+@*<div class="inner">
+    <h3 style="color: white;" class="blink">@string.Format("{0:N}", Model.OrderModel.OrderValue) cr</h3>
+    <p class="subtitle">Today order value</p>
+</div>
+<div class=" " style="margin-bottom:20px;">
+    <h3 style="color:black;" class="blink">@string.Format("{0:N}", Model.SalesModel.SalesValue) cr</h3>
+    <p class="subtitle">Today Sales value</p>
+</div>
+<div style="font-weight: bold; color: navajowhite;">
+    <p>No of Schedule Outlet: @ViewBag.ScheduledRetailer</p>
+    <p>No of Ordering Outlet: @ViewBag.OrderingRetailer</p>
+    <p>No of Total Retailer: @ViewBag.TotalRetailer</p>
+</div>*@
+<table class="table" style="margin-bottom:-5px;color:white;">
+
+    <tr>
+        <th style="color:black;">Today,@ViewBag.Year</th>
+        <th></th>
+        <th></th>
+    </tr>
+    <tr>
+        <td>Order</td>
+        <td>@string.Format("{0:N}", Model.OrderModel.OrderValue) Cr</td>
+    </tr>
+    <tr>
+        <td>Sales</td>
+        <td>@string.Format("{0:N}", Model.SalesModel.SalesValue) Cr</td>
+    </tr>
+    <tr>
+        <td>Scheduled Outlet</td>
+        <td>@ViewBag.ScheduledRetailer.ToString("#,##,##")</td>
+    </tr>
+    <tr>
+        <td>Ordering Outlet</td>
+        <td>@ViewBag.OrderingRetailer.ToString("#,##,##")</td>
+    </tr>
+    <tr>
+        <td>Total Retailer</td>
+        <td>@ViewBag.TotalRetailer.ToString("#,##,##")</td>
+    </tr>
+</table>
+
+<a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+
